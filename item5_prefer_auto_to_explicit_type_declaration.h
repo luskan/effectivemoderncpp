@@ -1,0 +1,15 @@
+//
+// Created by marcin on 15.01.17.
+//
+
+#ifndef EFFECTIVEMODERNCPP_ITEM5_PREFER_AUTO_TO_EXPLICIT_TYPE_DECLARATION_H
+#define EFFECTIVEMODERNCPP_ITEM5_PREFER_AUTO_TO_EXPLICIT_TYPE_DECLARATION_H
+
+
+class item5_prefer_auto_to_explicit_type_declaration {
+public:
+    void run();
+};
+
+
+#endif //EFFECTIVEMODERNCPP_ITEM5_PREFER_AUTO_TO_EXPLICIT_TYPE_DECLARATION_H

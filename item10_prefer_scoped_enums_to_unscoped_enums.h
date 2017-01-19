@@ -1,0 +1,15 @@
+//
+// Created by marcin on 10.01.17.
+//
+
+#ifndef EFFECTIVEMODERNCPP_ITEM10_PREFER_SCOPED_ENUMS_TO_UNSCOPED_ENUMS_H
+#define EFFECTIVEMODERNCPP_ITEM10_PREFER_SCOPED_ENUMS_TO_UNSCOPED_ENUMS_H
+
+
+class item10_prefer_scoped_enums_to_unscoped_enums {
+public:
+    void run();
+};
+
+
+#endif //EFFECTIVEMODERNCPP_ITEM10_PREFER_SCOPED_ENUMS_TO_UNSCOPED_ENUMS_H

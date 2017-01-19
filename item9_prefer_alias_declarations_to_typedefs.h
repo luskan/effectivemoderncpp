@@ -1,0 +1,15 @@
+//
+// Created by marcin on 07.01.17.
+//
+
+#ifndef EFFECTIVEMODERNCPP_ITEM9_PREFER_ALIAS_DECLARATIONS_TO_TYPEDEFS_H
+#define EFFECTIVEMODERNCPP_ITEM9_PREFER_ALIAS_DECLARATIONS_TO_TYPEDEFS_H
+
+
+class item9_prefer_alias_declarations_to_typedefs {
+public:
+    void run();
+};
+
+
+#endif //EFFECTIVEMODERNCPP_ITEM9_PREFER_ALIAS_DECLARATIONS_TO_TYPEDEFS_H

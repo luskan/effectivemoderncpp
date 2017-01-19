@@ -1,0 +1,15 @@
+//
+// Created by marcin on 12.01.17.
+//
+
+#ifndef EFFECTIVEMODERNCPP_ITEM2_UNDERSTAND_AUTO_TYPE_DEDUCTION_H
+#define EFFECTIVEMODERNCPP_ITEM2_UNDERSTAND_AUTO_TYPE_DEDUCTION_H
+
+
+class item2_understand_auto_type_deduction {
+public:
+    void run();
+};
+
+
+#endif //EFFECTIVEMODERNCPP_ITEM2_UNDERSTAND_AUTO_TYPE_DEDUCTION_H
