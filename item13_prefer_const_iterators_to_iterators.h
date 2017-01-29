@@ -1,0 +1,15 @@
+//
+// Created by marci_000 on 19.01.2017.
+//
+
+#ifndef EFFECTIVEMODERNCPP_ITEM13_PREFER_CONST_ITERATORS_TO_ITERATORS_H
+#define EFFECTIVEMODERNCPP_ITEM13_PREFER_CONST_ITERATORS_TO_ITERATORS_H
+
+
+class item13_prefer_const_iterators_to_iterators {
+  public:
+    void run();
+};
+
+
+#endif //EFFECTIVEMODERNCPP_ITEM13_PREFER_CONST_ITERATORS_TO_ITERATORS_H

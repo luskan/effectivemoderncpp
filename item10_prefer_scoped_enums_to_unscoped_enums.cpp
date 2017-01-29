@@ -3,6 +3,7 @@
 //
 
 #include <sys/types.h>
+#include <cstdint>
 #include "item10_prefer_scoped_enums_to_unscoped_enums.h"
 
 
