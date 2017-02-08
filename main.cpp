@@ -15,6 +15,12 @@
 #include "item12_declare_overriding_functions_override.h"
 #include "item13_prefer_const_iterators_to_iterators.h"
 #include "item14_declare_functions_noexcept_if_they_wont_emit_exceptions.h"
+#include "item15_use_constexpr_whenever_possible.h"
+#include "item16_make_const_member_functions_thread_safe.h"
+#include "item17_understand_special_member_function_generation.h"
+#include "item18_use_std_unique_ptr_for_exclusive_ownership_resource_management.h"
+#include "item19_use_std_shared_ptr_for_shared_ownership_resource_management.h"
+#include "item20_use_std_weak_ptr_for_std_shared_ptr_like_pointers_that_can_dangle.h"
 
 int main() {
 
@@ -34,7 +40,13 @@ int main() {
     //item11_prefer_deleted_functions_to_private_undefined_ones().run();
     //item12_declare_overriding_functions_override().run();
     //item13_prefer_const_iterators_to_iterators().run();
-    item14_declare_functions_noexcept_if_they_wont_emit_exceptions().run();
+    //item14_declare_functions_noexcept_if_they_wont_emit_exceptions().run();
+    //item15_use_constexpr_whenever_possible().run();
+    //item16_make_const_member_functions_thread_safe().run();
+    //item17_understand_special_member_function_generation().run();
+    //item18_use_std_unique_ptr_for_exclusive_ownership_resource_management().run();
+    //item19_use_std_shared_ptr_for_shared_ownership_resource_management().run();
+    item20_use_std_weak_ptr_for_std_shared_ptr_like_pointers_that_can_dangle().run();
 
     return 0;
 }

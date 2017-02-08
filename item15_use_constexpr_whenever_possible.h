@@ -1,0 +1,15 @@
+//
+// Created by marci_000 on 31.01.2017.
+//
+
+#ifndef EFFECTIVEMODERNCPP_ITEM15_USE_CONSTEXPR_WHENEVER_POSSIBLE_H
+#define EFFECTIVEMODERNCPP_ITEM15_USE_CONSTEXPR_WHENEVER_POSSIBLE_H
+
+
+class item15_use_constexpr_whenever_possible {
+  public:
+  void run();
+};
+
+
+#endif //EFFECTIVEMODERNCPP_ITEM15_USE_CONSTEXPR_WHENEVER_POSSIBLE_H
