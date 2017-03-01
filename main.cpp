@@ -21,6 +21,12 @@
 #include "item18_use_std_unique_ptr_for_exclusive_ownership_resource_management.h"
 #include "item19_use_std_shared_ptr_for_shared_ownership_resource_management.h"
 #include "item20_use_std_weak_ptr_for_std_shared_ptr_like_pointers_that_can_dangle.h"
+#include "item21_prefer_std_make_unique_and_std_make_shared_to_direct_use_of_new.h"
+#include "item22_when_using_the_pimpl_idiom_define_special_member_functions_in_the_implementation_file.h"
+#include "item23_understand_std_move_and_std_forward.h"
+#include "item24_distinguish_universal_references_from_rvalue_references.h"
+#include "item25_use_std_move_on_rvalue_references_std_forward_on_universal_references.h"
+#include "item26_avoid_overloading_on_universal_references.h"
 
 int main() {
 
@@ -46,7 +52,13 @@ int main() {
     //item17_understand_special_member_function_generation().run();
     //item18_use_std_unique_ptr_for_exclusive_ownership_resource_management().run();
     //item19_use_std_shared_ptr_for_shared_ownership_resource_management().run();
-    item20_use_std_weak_ptr_for_std_shared_ptr_like_pointers_that_can_dangle().run();
+    //item20_use_std_weak_ptr_for_std_shared_ptr_like_pointers_that_can_dangle().run();
+    //item21_prefer_std_make_unique_and_std_make_shared_to_direct_use_of_new().run();
+    //item22_when_using_the_pimpl_idiom_define_special_member_functions_in_the_implementation_file().run();
+    //item23_understand_std_move_and_std_forward().run();
+    //item24_distinguish_universal_references_from_rvalue_references().run();
+    //item25_use_std_move_on_rvalue_references_std_forward_on_universal_references().run();
+    item26_avoid_overloading_on_universal_references().run();
 
     return 0;
 }
