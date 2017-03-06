@@ -27,6 +27,7 @@
 #include "item24_distinguish_universal_references_from_rvalue_references.h"
 #include "item25_use_std_move_on_rvalue_references_std_forward_on_universal_references.h"
 #include "item26_avoid_overloading_on_universal_references.h"
+#include "item27_familiarize_yourself_with_alternatives_to_overriding_on_universal_references.h"
 
 int main() {
 
@@ -58,7 +59,8 @@ int main() {
     //item23_understand_std_move_and_std_forward().run();
     //item24_distinguish_universal_references_from_rvalue_references().run();
     //item25_use_std_move_on_rvalue_references_std_forward_on_universal_references().run();
-    item26_avoid_overloading_on_universal_references().run();
+    //item26_avoid_overloading_on_universal_references().run();
+    item27_familiarize_yourself_with_alternatives_to_overriding_on_universal_references().run();
 
     return 0;
 }
