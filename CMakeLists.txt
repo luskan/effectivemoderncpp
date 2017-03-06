@@ -1,13 +1,14 @@
 cmake_minimum_required(VERSION 3.6)
 project(effectivemoderncpp)
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -O3 -Wall -pedantic -pthread")
+set(CMAKE_CXX_STANDARD 14)
+
 if(UNIX)
     set(CMAKE_CXX_COMPILER "/home/marcin/gcc-6.3.0/bin/g++")
     set(CMAKE_C_COMPILER "/home/marcin/gcc-6.3.0/bin/gcc")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -static-libstdc++")
 endif()
-
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -O3 -Wall -pedantic -pthread")
-set(CMAKE_CXX_STANDARD 14)
 
 if(WIN32)
     SET(BOOST_ROOT C:/local/boost_1_63_0)
