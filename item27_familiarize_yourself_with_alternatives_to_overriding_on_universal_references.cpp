@@ -5,6 +5,7 @@
 #include <type_traits>
 #include <iostream>
 #include <thread>
+#include <functional>
 #include <boost/type_index.hpp>
 
 #include "item27_familiarize_yourself_with_alternatives_to_overriding_on_universal_references.h"
@@ -54,8 +55,9 @@ struct is_any_of<T,U> : std::is_same<T,U>::type { };
 
 /*
 
- Below class is wrong, callMe in both versions has the same signatures.
-Default template arguments are not part of the signature of a template (so both definitions try to define the same template twice). Their parameter types are part of the signature, however.
+  Below class is wrong, callMe in both versions has the same signatures.
+  Default template arguments are not part of the signature of a template (so both definitions try to define the same template twice).
+  Their parameter types are part of the signature, however.
 
 class TestCall {
  public:
@@ -107,7 +109,20 @@ class TestCall2 {
   }
 };
 
+template<typename T>
+void foo12(T t,
+           std::enable_if_t<std::is_integral<std::decay_t<T>>::value, int> = 0
+           //typename std::enable_if<std::is_integral<T>::value, int>::type = 0
+)
+{
+  std::cout << type_id_with_cvr<T>().pretty_name() << "\n";
+}
+
 void item27_familiarize_yourself_with_alternatives_to_overriding_on_universal_references::run() {
+
+  foo12(1);
+  //foo12(0.2);
+
   // Tag dispatch
   check_bool(std::is_integral<int>());
   check_bool(std::is_integral<double>());
