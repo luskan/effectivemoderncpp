@@ -28,6 +28,9 @@
 #include "item25_use_std_move_on_rvalue_references_std_forward_on_universal_references.h"
 #include "item26_avoid_overloading_on_universal_references.h"
 #include "item27_familiarize_yourself_with_alternatives_to_overriding_on_universal_references.h"
+#include "item28_understand_reference_collapsing.h"
+#include "item29_assume_that_move_operations_are_not_present_not_cheap_and_not_used.h"
+#include "item30_familiarize_yourself_with_perfect_forwarding_failure_cases.h"
 
 int main() {
 
@@ -60,7 +63,11 @@ int main() {
     //item24_distinguish_universal_references_from_rvalue_references().run();
     //item25_use_std_move_on_rvalue_references_std_forward_on_universal_references().run();
     //item26_avoid_overloading_on_universal_references().run();
-    item27_familiarize_yourself_with_alternatives_to_overriding_on_universal_references().run();
+    //item27_familiarize_yourself_with_alternatives_to_overriding_on_universal_references().run();
+    //item28_understand_reference_collapsing().run();
+    //item29_assume_that_move_operations_are_not_present_not_cheap_and_not_used().run();
+    item30_familiarize_yourself_with_perfect_forwarding_failure_cases().run();
+
 
     return 0;
 }
