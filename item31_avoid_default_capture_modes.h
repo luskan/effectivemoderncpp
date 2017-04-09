@@ -1,0 +1,15 @@
+//
+// Created by marci_000 on 31.03.2017.
+//
+
+#ifndef EFFECTIVEMODERNCPP_ITEM31_AVOID_DEFAULT_CAPTURE_MODES_H
+#define EFFECTIVEMODERNCPP_ITEM31_AVOID_DEFAULT_CAPTURE_MODES_H
+
+
+class item31_avoid_default_capture_modes {
+ public:
+  void run();
+};
+
+
+#endif //EFFECTIVEMODERNCPP_ITEM31_AVOID_DEFAULT_CAPTURE_MODES_H

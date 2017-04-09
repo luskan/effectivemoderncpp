@@ -31,6 +31,8 @@
 #include "item28_understand_reference_collapsing.h"
 #include "item29_assume_that_move_operations_are_not_present_not_cheap_and_not_used.h"
 #include "item30_familiarize_yourself_with_perfect_forwarding_failure_cases.h"
+#include "item31_avoid_default_capture_modes.h"
+#include "item32_use_init_capture_to_move_objects_into_closures.h"
 
 int main() {
 
@@ -66,8 +68,9 @@ int main() {
     //item27_familiarize_yourself_with_alternatives_to_overriding_on_universal_references().run();
     //item28_understand_reference_collapsing().run();
     //item29_assume_that_move_operations_are_not_present_not_cheap_and_not_used().run();
-    item30_familiarize_yourself_with_perfect_forwarding_failure_cases().run();
-
+    //item30_familiarize_yourself_with_perfect_forwarding_failure_cases().run();
+    //item31_avoid_default_capture_modes().run();
+    item32_use_init_capture_to_move_objects_into_closures().run();
 
     return 0;
 }

@@ -128,4 +128,16 @@ void item30_familiarize_yourself_with_perfect_forwarding_failure_cases::run() {
   funcCallValue(data.field3);
   //fwdFuncCallValue(data.field3); // error: bitfield cannot be bound to non const reference
   fwdFuncCallValue(static_cast<int>(data.field3));
+
+  //
+  // Few tests to see how vector emplace_back might fail
+
+  std::vector<short> v;
+  const int ci = 123;
+  SomeBitFieldStruct dt = {0};
+  //v.emplace_back(dt.field1); // error: cannot bind bitfield to non const
+
+  std::vector<int*> v2;
+  v2.emplace_back(new int());
+  //v2.emplace_back(NULL);    // deduced type for NULL is long long int, while int* is to be stored
 }
