@@ -33,6 +33,8 @@
 #include "item30_familiarize_yourself_with_perfect_forwarding_failure_cases.h"
 #include "item31_avoid_default_capture_modes.h"
 #include "item32_use_init_capture_to_move_objects_into_closures.h"
+#include "item33_use_decltype_on_auto_ref_ref_parameters_to_std_forward_them.h"
+#include "item34_prefer_lambdas_to_std_bind.h"
 
 int main() {
 
@@ -70,7 +72,9 @@ int main() {
     //item29_assume_that_move_operations_are_not_present_not_cheap_and_not_used().run();
     //item30_familiarize_yourself_with_perfect_forwarding_failure_cases().run();
     //item31_avoid_default_capture_modes().run();
-    item32_use_init_capture_to_move_objects_into_closures().run();
+    //item32_use_init_capture_to_move_objects_into_closures().run();
+    //item33_use_decltype_on_auto_ref_ref_parameters_to_std_forward_them().run();
+    item34_prefer_lambdas_to_std_bind().run();
 
     return 0;
 }
