@@ -64,9 +64,20 @@ struct TestDTorNoExcept {
                                           //
     // it is discouraged to throw in dtor, thats why since c++11 all dtors (user defined/or generated)
     // are always noexcept
+    // !! - objects of classes with throwing destructors should not be used with STL classes as this causes UB.
     throw std::runtime_error("DTor - except");
   }
 };
+
+void NoExceptFunctionWithObj1() noexcept {
+  TestDataWithoutNoexcept test;
+  throw std::runtime_error("NoExceptFunctionWithObj1 ex.");
+}
+
+void NoExceptFunctionWithObj2() throw() {
+  TestDataWithoutNoexcept test;
+  throw std::runtime_error("NoExceptFunctionWithObj2 ex.");
+}
 
 void item14_declare_functions_noexcept_if_they_wont_emit_exceptions::run() {
 
@@ -114,4 +125,20 @@ void item14_declare_functions_noexcept_if_they_wont_emit_exceptions::run() {
 
   TestDataWithNoexcept::allowLog = false;
   TestDataWithoutNoexcept::allowLog = false;
+
+  // Now lets see whether stack is being unwound when exception is thrown in noexcept versus throw() function.
+  std::cout << "\n See how dtors are called in noexcept or throw() functions\n";
+  try {
+    //NoExceptFunctionWithObj1();
+  }
+  catch(std::runtime_error& ex) {
+    std::cout << ex.what();
+  }
+
+  try {
+    NoExceptFunctionWithObj2();
+  }
+  catch(std::runtime_error& ex) {
+    std::cout << ex.what();
+  }
 }
