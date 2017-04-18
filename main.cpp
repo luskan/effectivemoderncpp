@@ -36,6 +36,7 @@
 #include "item33_use_decltype_on_auto_ref_ref_parameters_to_std_forward_them.h"
 #include "item34_prefer_lambdas_to_std_bind.h"
 #include "item35_prefer_task_based_programming_to_thread_based.h"
+#include "Item36_specify_std_launch_async_if_asynchronicity_is_essential.h"
 
 int main() {
 
@@ -76,7 +77,8 @@ int main() {
     //item32_use_init_capture_to_move_objects_into_closures().run();
     //item33_use_decltype_on_auto_ref_ref_parameters_to_std_forward_them().run();
     //item34_prefer_lambdas_to_std_bind().run();
-    item35_prefer_task_based_programming_to_thread_based().run();
+    //item35_prefer_task_based_programming_to_thread_based().run();
+    Item36_specify_std_launch_async_if_asynchronicity_is_essential().run();
 
     return 0;
 }

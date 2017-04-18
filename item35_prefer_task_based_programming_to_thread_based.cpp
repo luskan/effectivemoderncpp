@@ -65,7 +65,8 @@ void item35_prefer_task_based_programming_to_thread_based::run() {
   // Now the same as above but with task based aproach (std::async)
   // WARNING: now as bad as with above std::threads system resets, but still strange, std::future_status::deferred is not
   // returned, system heavily freezes.
-  std::cout << "\nGeneration of out of threads exception\n";
+  /*
+  std::cout << "\nGeneration of out of thread exception\n";
   std::vector<std::future<void>> fut_vec;
   std::vector<std::future<void>> fut_vec_defered;
   std::atomic<bool> wait(true);
@@ -81,4 +82,5 @@ void item35_prefer_task_based_programming_to_thread_based::run() {
       std::cout << "#" << (i / 100) << " fut_vec.size() = " << fut_vec.size() << ", fut_vec_defered.size() = " << fut_vec_defered.size() << "\n";
     }
   }
+   */
 }
