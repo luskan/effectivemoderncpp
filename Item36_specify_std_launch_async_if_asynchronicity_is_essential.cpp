@@ -8,7 +8,15 @@
 #include <iostream>
 #include <iomanip>
 
+template<typename F, typename... Args>
+inline std::future<typename std::result_of<F(Args...)>::type>
+reallyAsync(F&& f, Args&&... args) {
+ return std::async(std::launch::async, std::forward<F>(f), std::forward<Args>(args)...);
+}
+
 void Item36_specify_std_launch_async_if_asynchronicity_is_essential::run() {
+
+  using namespace std::literals;
 
   auto func = [](){ std::cout << std::setw(30) << "From async: thread id is " << std::this_thread::get_id() << "\n"; };
 
@@ -33,4 +41,27 @@ void Item36_specify_std_launch_async_if_asynchronicity_is_essential::run() {
   auto f6 = std::async(std::launch::async, func);
   f5.get();
   f6.get();
+
+  //the correct way to execute a task with default policy.
+  std::cout << "\nTask execute." << "\n";
+  auto fut_a1 = std::async([]{ std::cout << "Some task being executed."; std::this_thread::sleep_for(1s); });
+  if (fut_a1.wait_for(0s) == std::future_status::deferred) {
+    std::cout << "Task is deferred!.\n";
+    fut_a1.get();
+  }
+  else {
+    int n = 0;
+    while(fut_a1.wait_for(100ms) != std::future_status::ready) {
+      std::cout << "#" << n++ << " Task is still being executed.\n";
+    }
+  }
+
+  // std::async by default executes using default|async launch policy. Below is use of realAsync which by default always
+  // executes async tasks.
+  auto fut_ra = reallyAsync(
+    [](int n, std::string msg){ std::cout << "\nrealAsync: " << msg << " - " << n << "\n"; },
+    0,
+    "Test"
+  );
+  fut_ra.get();
 }

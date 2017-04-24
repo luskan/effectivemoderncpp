@@ -37,6 +37,9 @@
 #include "item34_prefer_lambdas_to_std_bind.h"
 #include "item35_prefer_task_based_programming_to_thread_based.h"
 #include "Item36_specify_std_launch_async_if_asynchronicity_is_essential.h"
+#include "item37_make_std_threads_unjoinable_on_all_paths.h"
+#include "item38_be_aware_of_varying_thread_handle_destructor_behavior.h"
+#include "item39_consider_void_futures_for_one_shot_event_communication.h"
 
 int main() {
 
@@ -78,7 +81,10 @@ int main() {
     //item33_use_decltype_on_auto_ref_ref_parameters_to_std_forward_them().run();
     //item34_prefer_lambdas_to_std_bind().run();
     //item35_prefer_task_based_programming_to_thread_based().run();
-    Item36_specify_std_launch_async_if_asynchronicity_is_essential().run();
+    //Item36_specify_std_launch_async_if_asynchronicity_is_essential().run();
+    //item37_make_std_threads_unjoinable_on_all_paths().run();
+    //item38_be_aware_of_varying_thread_handle_destructor_behavior().run();
+    item39_consider_void_futures_for_one_shot_event_communication().run();
 
     return 0;
 }
