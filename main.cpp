@@ -40,6 +40,8 @@
 #include "item37_make_std_threads_unjoinable_on_all_paths.h"
 #include "item38_be_aware_of_varying_thread_handle_destructor_behavior.h"
 #include "item39_consider_void_futures_for_one_shot_event_communication.h"
+#include "item40_use_std_atomic_for_concurrency_volatile_for_special_memory.h"
+#include "item41_consider_pass_by_value_for_copyable_parameters_that_are_cheap_to_move_and_always_copied.h"
 
 int main() {
 
@@ -84,7 +86,9 @@ int main() {
     //Item36_specify_std_launch_async_if_asynchronicity_is_essential().run();
     //item37_make_std_threads_unjoinable_on_all_paths().run();
     //item38_be_aware_of_varying_thread_handle_destructor_behavior().run();
-    item39_consider_void_futures_for_one_shot_event_communication().run();
+    //item39_consider_void_futures_for_one_shot_event_communication().run();
+    //item40_use_std_atomic_for_concurrency_volatile_for_special_memory().run();
+    item41_consider_pass_by_value_for_copyable_parameters_that_are_cheap_to_move_and_always_copied().run();
 
     return 0;
 }
