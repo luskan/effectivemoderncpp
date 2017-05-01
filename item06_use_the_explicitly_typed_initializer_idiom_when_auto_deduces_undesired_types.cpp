@@ -4,7 +4,7 @@
 
 #include <bitset>
 #include <iostream>
-#include "item6_use_the_explicitly_typed_initializer_idiom_when_auto_deduces_undesired_types.h"
+#include "item06_use_the_explicitly_typed_initializer_idiom_when_auto_deduces_undesired_types.h"
 #include <boost/type_index.hpp>
 
 using boost::typeindex::type_id_with_cvr;

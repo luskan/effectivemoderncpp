@@ -6,7 +6,7 @@
 #include <cxxabi.h>
 #include <boost/type_index.hpp>
 #include <iostream>
-#include "item9_prefer_alias_declarations_to_typedefs.h"
+#include "item09_prefer_alias_declarations_to_typedefs.h"
 
 using boost::typeindex::type_id_with_cvr;
 
